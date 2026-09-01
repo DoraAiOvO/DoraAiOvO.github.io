@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import Link from "next/link";
 import { InteractiveEffects } from "./interactive-effects";
 
 const GithubMark = () => (
@@ -102,16 +103,16 @@ export default function Home() {
               <dd>Video games</dd>
             </div>
             <div>
-              <dt>Soft spot for</dt>
-              <dd>Cute UI + tiny details</dd>
+              <dt>Usually refining</dt>
+              <dd>One more version</dd>
             </div>
           </dl>
         </div>
 
         <div className="hero-console" aria-label="Dora's creative system">
-          <span className="cute-sticker sticker-hi" aria-hidden="true">hi!</span>
-          <span className="cute-sticker sticker-star" aria-hidden="true">✦</span>
-          <span className="cute-sticker sticker-smile" aria-hidden="true">˙ᵕ˙</span>
+          <span className="console-sticker sticker-hi" aria-hidden="true">hi!</span>
+          <span className="console-sticker sticker-star" aria-hidden="true">✦</span>
+          <span className="console-sticker sticker-smile" aria-hidden="true">˙ᵕ˙</span>
           <div className="console-topline">
             <span>DORA.OS / 01</span>
             <span className="live-label">
@@ -152,7 +153,7 @@ export default function Home() {
           <i>✦</i>
           <span>GAMES, HONESTLY</span>
           <i>✦</i>
-          <span>CUTE LITTLE DETAILS</span>
+          <span>PRODUCTS WITH A POINT</span>
           <i>✦</i>
           <span>LEARNING BY MAKING</span>
           <i>✦</i>
@@ -160,7 +161,7 @@ export default function Home() {
           <i>✦</i>
           <span>GAMES, HONESTLY</span>
           <i>✦</i>
-          <span>CUTE LITTLE DETAILS</span>
+          <span>PRODUCTS WITH A POINT</span>
           <i>✦</i>
           <span>LEARNING BY MAKING</span>
         </div>
@@ -190,7 +191,7 @@ export default function Home() {
           <dl className="interest-list" aria-label="Dora's current interests">
             <div><dt>Always playing</dt><dd>One more game</dd></div>
             <div><dt>Making</dt><dd>AI products + experiments</dd></div>
-            <div><dt>Soft spot for</dt><dd>Cute details + good UI</dd></div>
+            <div><dt>Usually refining</dt><dd>The next version</dd></div>
           </dl>
         </div>
 
@@ -291,7 +292,7 @@ export default function Home() {
           </article>
 
           <article className="curiosity-card curiosity-ui" data-reveal>
-            <span>03 / UI + LITTLE DETAILS</span>
+            <span>03 / PRODUCT CRAFT</span>
             <h3>I notice when something feels good.</h3>
             <p>
               Motion, spacing, color, wording, and tiny moments of personality
@@ -328,7 +329,7 @@ export default function Home() {
           <article data-reveal>
             <span>01</span>
             <h3>Code</h3>
-            <p>Java · Python · C · TypeScript</p>
+            <p>Java · Python · C++ · TypeScript</p>
           </article>
           <article data-reveal>
             <span>02</span>
@@ -344,35 +345,6 @@ export default function Home() {
             <span>04</span>
             <h3>Shape</h3>
             <p>Onshape · 3D CAD · product modeling · technical presentation</p>
-          </article>
-        </div>
-      </section>
-
-      <section className="recognition-section" aria-labelledby="recognition-title">
-        <div className="recognition-heading" data-reveal>
-          <p className="section-kicker">A few nice moments</p>
-          <h2 id="recognition-title">Things I&apos;m quietly proud of.</h2>
-          <p>
-            They&apos;re little markers along the way—not the reason I keep going,
-            but still lovely to look back on.
-          </p>
-        </div>
-
-        <div className="recognition-list" data-reveal>
-          <article>
-            <time>2026</time>
-            <div><h3>Physics Bowl</h3><p>National Gold</p></div>
-            <span>PHYSICS</span>
-          </article>
-          <article>
-            <time>2025</time>
-            <div><h3>HiMCM</h3><p>Meritorious Award · two-person modeling team</p></div>
-            <span>MODELING</span>
-          </article>
-          <article>
-            <time>TEAM</time>
-            <div><h3>National Careers Challenge</h3><p>School team recognition</p></div>
-            <span>COLLABORATION</span>
           </article>
         </div>
       </section>
@@ -551,7 +523,18 @@ export default function Home() {
           Find me on GitHub <Arrow />
         </a>
         <div className="footer-bottom">
-          <span>© 2026 Dora AI</span>
+          <span>
+            © 2026 Dora AI{" "}
+            <Link
+              className="archive-key"
+              href="/footnotes/"
+              rel="nofollow"
+              aria-label="Open a small archive"
+              title="A small archive"
+            >
+              ✦
+            </Link>
+          </span>
           <span>Made slowly / still evolving</span>
           <a href="#top">Back to top ↑</a>
         </div>

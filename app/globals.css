@@ -450,7 +450,7 @@ h1 {
   box-shadow: 7px 9px 0 rgba(255, 131, 180, .88), 0 42px 100px rgba(25, 19, 31, 0.28), inset 0 0 60px rgba(124, 156, 255, 0.11);
 }
 
-.cute-sticker {
+.console-sticker {
   position: absolute;
   z-index: 6;
   display: grid;
@@ -765,6 +765,17 @@ h1 {
   line-height: .88;
 }
 
+.footnotes-page .recognition-heading h1 {
+  grid-column: 1;
+  max-width: 980px;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(3.6rem, 7vw, 7.8rem);
+  font-weight: 500;
+  letter-spacing: -.065em;
+  line-height: .88;
+}
+
 .path-heading > p,
 .toolbox-heading > p,
 .recognition-heading > p {
@@ -1066,12 +1077,55 @@ h1 {
   text-transform: uppercase;
 }
 
+.recognition-list h2,
 .recognition-list h3 {
   margin: 0 0 8px;
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 3vw, 3.2rem);
   font-weight: 600;
   letter-spacing: -.045em;
+}
+
+.footnotes-page {
+  min-height: 100svh;
+  background: #ffc1d9;
+}
+
+.footnotes-page .site-header {
+  border-bottom-color: rgba(25, 19, 31, .25);
+}
+
+.footnotes-header-note {
+  margin: 0;
+  color: rgba(25, 19, 31, .48);
+  font: 600 8px/1 var(--font-mono);
+  letter-spacing: .12em;
+}
+
+.footnotes-back,
+.footnotes-return {
+  font: 600 9px/1 var(--font-mono);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.footnotes-back {
+  justify-self: end;
+}
+
+.footnotes-page .recognition-section {
+  min-height: calc(100svh - 88px);
+  padding-top: clamp(82px, 10vw, 150px);
+}
+
+.footnotes-return {
+  width: fit-content;
+  margin-top: 70px;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid rgba(25, 19, 31, .45);
 }
 
 .recognition-list p {
@@ -1812,6 +1866,18 @@ footer h2 { max-width: 1020px; font-size: clamp(4.4rem, 9vw, 10rem); position: r
 
 .footer-bottom a { justify-self: end; }
 
+.footer-bottom .archive-key {
+  margin-left: 5px;
+  color: rgba(7, 12, 24, .24);
+  transition: color 180ms ease, text-shadow 180ms ease;
+}
+
+.footer-bottom .archive-key:hover,
+.footer-bottom .archive-key:focus-visible {
+  color: rgba(7, 12, 24, .82);
+  text-shadow: 0 0 12px rgba(217, 255, 109, .9);
+}
+
 a:focus-visible {
   outline: 2px solid var(--acid);
   outline-offset: 5px;
@@ -1862,6 +1928,7 @@ a:focus-visible {
   .curiosity-heading h2,
   .toolbox-heading h2,
   .recognition-heading h2 { font-size: clamp(3.25rem, 15vw, 5.35rem); }
+  .footnotes-page .recognition-heading h1 { font-size: clamp(3.25rem, 15vw, 5.35rem); }
   .chapter-grid { grid-template-columns: 1fr; margin-top: 50px; }
   .chapter-card,
   .chapter-card:last-child { grid-column: auto; min-height: 360px; }
@@ -1881,6 +1948,7 @@ a:focus-visible {
   .recognition-list { margin-top: 50px; }
   .recognition-list article { grid-template-columns: 74px 1fr; gap: 16px; padding: 22px 0; }
   .recognition-list > article > span { display: none; }
+  .footnotes-header-note { display: none; }
   .work-section { padding-top: 90px; padding-bottom: 90px; }
   .section-heading { grid-template-columns: 1fr; margin-bottom: 50px; }
   .section-heading h2,

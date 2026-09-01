@@ -13,14 +13,27 @@ test("the site introduces Dora before the projects", async () => {
   assert.match(html, /One question leads to another/);
   assert.match(html, /Yes, I really love video games/);
   assert.match(html, /I(?:&#x27;|')m not a game developer/);
-  assert.match(html, /Physics Bowl/);
+  assert.doesNotMatch(html, /Physics Bowl|USACO|HiMCM|National Careers Challenge/);
   assert.match(html, /A toolbox that keeps changing/);
+  assert.match(html, /Java · Python · C\+\+ · TypeScript/);
+  assert.doesNotMatch(html, /Java · Python · C · TypeScript/);
   assert.match(html, /A few things I(?:&#x27;|')ve made/);
   assert.ok(html.indexOf("A little more about me") < html.indexOf("FinSight"));
   assert.match(html, /RoboLabs/);
   assert.doesNotMatch(html, /Dean(?:&#x27;|')s List|Division 1|35\/40|school-record/);
   assert.doesNotMatch(html, /The Frederick Gunn School/);
   assert.doesNotMatch(html, /Shenzhen|Connecticut|Grade 12|Class of 2027|Physics into ECE/);
+});
+
+test("awards live in a quiet, non-indexed footnotes page", async () => {
+  const html = await readFile(new URL("out/footnotes/index.html", root), "utf8");
+
+  assert.match(html, /USACO/);
+  assert.match(html, /Division Gold/);
+  assert.match(html, /Physics Bowl/);
+  assert.match(html, /HiMCM/);
+  assert.match(html, /National Careers Challenge/);
+  assert.match(html, /name="robots" content="noindex, nofollow"/);
 });
 
 test("the static build includes publishing assets", async () => {

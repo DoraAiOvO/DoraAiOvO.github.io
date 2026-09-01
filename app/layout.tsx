@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://doraaiovo.github.io"),
   title: "Dora Ai — making, learning, and probably playing a game",
   description:
-    "Dora Ai’s little corner of the internet: AI products, creative experiments, good UI, and a very serious love of video games.",
+    "Dora Ai’s little corner of the internet: AI products, creative experiments, and a very serious love of video games.",
   openGraph: {
     title: "Hi, I’m Dora.",
     description:
-      "AI products, creative experiments, good UI, and a very serious love of video games.",
+      "AI products, creative experiments, and a very serious love of video games.",
     url: "https://doraaiovo.github.io",
     siteName: "Dora AI",
     type: "website",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hi, I’m Dora.",
     description:
-      "AI products, creative experiments, good UI, and a very serious love of video games.",
+      "AI products, creative experiments, and a very serious love of video games.",
     images: ["/og-playful.png"],
   },
 };
