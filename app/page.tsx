@@ -529,10 +529,10 @@ export default function Home() {
               className="archive-key"
               href="/footnotes/"
               rel="nofollow"
-              aria-label="Open a small archive"
-              title="A small archive"
+              aria-label="Open the small wins archive"
+              title="Small wins"
             >
-              ✦
+              Small wins <span aria-hidden="true">✦</span>
             </Link>
           </span>
           <span>Made slowly / still evolving</span>

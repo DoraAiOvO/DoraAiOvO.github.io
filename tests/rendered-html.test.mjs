@@ -14,6 +14,7 @@ test("the site introduces Dora before the projects", async () => {
   assert.match(html, /Yes, I really love video games/);
   assert.match(html, /I(?:&#x27;|')m not a game developer/);
   assert.doesNotMatch(html, /Physics Bowl|USACO|HiMCM|National Careers Challenge/);
+  assert.match(html, /Small wins/);
   assert.match(html, /A toolbox that keeps changing/);
   assert.match(html, /Java · Python · C\+\+ · TypeScript/);
   assert.doesNotMatch(html, /Java · Python · C · TypeScript/);

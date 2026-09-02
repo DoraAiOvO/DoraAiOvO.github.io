@@ -1867,15 +1867,22 @@ footer h2 { max-width: 1020px; font-size: clamp(4.4rem, 9vw, 10rem); position: r
 .footer-bottom a { justify-self: end; }
 
 .footer-bottom .archive-key {
-  margin-left: 5px;
-  color: rgba(7, 12, 24, .24);
-  transition: color 180ms ease, text-shadow 180ms ease;
+  margin-left: 9px;
+  padding: 5px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid rgba(7, 12, 24, .24);
+  border-radius: 999px;
+  color: rgba(7, 12, 24, .68);
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
 .footer-bottom .archive-key:hover,
 .footer-bottom .archive-key:focus-visible {
-  color: rgba(7, 12, 24, .82);
-  text-shadow: 0 0 12px rgba(217, 255, 109, .9);
+  color: var(--ink);
+  background: var(--acid);
+  border-color: rgba(7, 12, 24, .5);
 }
 
 a:focus-visible {
